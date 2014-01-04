@@ -477,12 +477,12 @@ Er du sikker på at du ønsker at kryptere din tegnebog?</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
+        <source>Tabs toolRCK</source>
         <translation>Faneværktøjslinje</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>Handlingsværktøjslinje</translation>
     </message>
     <message>
@@ -1945,7 +1945,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>&amp;Minimer til systembakken i stedet for proceslinjen</translation>
     </message>
     <message>

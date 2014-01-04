@@ -483,12 +483,12 @@ Tahdotko varmasti salata lompakon?</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
+        <source>Tabs toolRCK</source>
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>Toimintopalkki</translation>
     </message>
     <message>
@@ -1950,7 +1950,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>&amp;Pienennä ilmaisinalueelle työkalurivin sijasta</translation>
     </message>
     <message>

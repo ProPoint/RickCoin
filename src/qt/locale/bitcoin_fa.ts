@@ -485,12 +485,12 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
+        <source>Tabs toolRCK</source>
         <translation>نوار ابزار زبانه ها</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>نوار ابزار عملیت</translation>
     </message>
     <message>
@@ -1951,7 +1951,7 @@ Address: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>حد اقل رساندن در جای نوار ابزار ها</translation>
     </message>
     <message>

@@ -113,7 +113,7 @@ It can be downloaded from http://fukuchi.org/works/qrencode/index.html.en, or in
 flag to qmake to control this:
 
 +--------------+--------------------------------------------------------------------------+
-| USE_QRCODE=0 | (the default) No QRCode support - libarcode not required                 |
+| USE_QRCODE=0 | (the default) No QRCode support - liRCKcode not required                 |
 +--------------+--------------------------------------------------------------------------+
 | USE_QRCODE=1 | QRCode support enabled                                                   |
 +--------------+--------------------------------------------------------------------------+

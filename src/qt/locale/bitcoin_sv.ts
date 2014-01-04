@@ -85,7 +85,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
     <message>
         <location filename="../forms/addressbookpage.ui" line="116"/>
         <source>Delete the currently selected address from the list. Only sending addresses can be deleted.</source>
-        <translation>Ta bort den valda adressen från listan. Bara avsändar-adresser kan tas bort.</translation>
+        <translation>Ta bort den valda adressen från listan. RCKa avsändar-adresser kan tas bort.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="119"/>
@@ -483,12 +483,12 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
-        <translation>Verktygsfält för Tabbar</translation>
+        <source>Tabs toolRCK</source>
+        <translation>Verktygsfält för TabRCK</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>Verktygsfältet för Handlingar</translation>
     </message>
     <message>
@@ -703,7 +703,7 @@ Adress: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="52"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
-        <translation>Adressen som är associerad med detta adressboksinlägg. Detta kan enbart ändras för sändande adresser.</translation>
+        <translation>Adressen som är associerad med detta adressboksinlägg. Detta kan enRCKt ändras för sändande adresser.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="20"/>
@@ -838,7 +838,7 @@ Adress: %4
     <message>
         <location filename="../forms/messagepage.ui" line="20"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signera meddelanden med dina adresser för att bevisa att du äger dem. Var försiktig med vad du signerar eftersom phising-attacker kan försöka få dig att skriva över din identitet till någon annan. Signera bara väldetaljerade påståenden du kan gå i god för.</translation>
+        <translation>Du kan signera meddelanden med dina adresser för att bevisa att du äger dem. Var försiktig med vad du signerar eftersom phising-attacker kan försöka få dig att skriva över din identitet till någon annan. Signera RCKa väldetaljerade påståenden du kan gå i god för.</translation>
     </message>
     <message>
         <location filename="../forms/messagepage.ui" line="38"/>
@@ -1341,7 +1341,7 @@ Adress: %4
     <message>
         <location filename="../sendcoinsdialog.cpp" line="144"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Dubblett av adress funnen, kan bara skicka till varje adress en gång per sändning.</translation>
+        <translation>Dubblett av adress funnen, kan RCKa skicka till varje adress en gång per sändning.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="149"/>
@@ -1864,7 +1864,7 @@ Adress: %4
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="20"/>
         <source>Enter the message and signature below (be careful to correctly copy newlines, spaces, tabs and other invisible characters) to obtain the Bitcoin address used to sign the message.</source>
-        <translation>Skriv meddelandet och signaturen nedan (var noga med att kopiera rätt nyradstecken, mellanslag, tabbar och andra osynliga tecken) för att erhålla Bitcoin-adressen som användes för att signera meddelandet.</translation>
+        <translation>Skriv meddelandet och signaturen nedan (var noga med att kopiera rätt nyradstecken, mellanslag, tabRCK och andra osynliga tecken) för att erhålla Bitcoin-adressen som användes för att signera meddelandet.</translation>
     </message>
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="62"/>
@@ -1950,7 +1950,7 @@ Adress: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>&amp;Minimera till systemfältet istället för aktivitetsfältet</translation>
     </message>
     <message>
@@ -2054,7 +2054,7 @@ Adress: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="66"/>
         <source>Connect only to the specified node</source>
-        <translation>Koppla enbart upp till den specifierade noden</translation>
+        <translation>Koppla enRCKt upp till den specifierade noden</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="67"/>
@@ -2069,7 +2069,7 @@ Adress: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="69"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4 or IPv6)</source>
-        <translation>Anslut enbart till noder i nätverket &lt;net&gt; (IPv4 eller IPv6)</translation>
+        <translation>Anslut enRCKt till noder i nätverket &lt;net&gt; (IPv4 eller IPv6)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="70"/>
@@ -2489,7 +2489,7 @@ Det är rekommenderat att använda följande slumpade lösenord:
 rpcuser=bitcoinrpc
 rpcpassword=%s
 (du behöver inte komma ihåg lösenordet)
-Om filen inte existerar, skapa den med enbart ägarläsbara filrättigheter.
+Om filen inte existerar, skapa den med enRCKt ägarläsRCKa filrättigheter.
 </translation>
     </message>
     <message>
@@ -2509,7 +2509,7 @@ Om filen inte existerar, skapa den med enbart ägarläsbara filrättigheter.
 If the file does not exist, create it with owner-readable-only file permissions.</source>
         <translation>Du behöver välja ett rpclösensord i konfigurationsfilen:
 %s
-Om filen inte existerar, skapa den med filrättigheten endast läsbar för ägaren.</translation>
+Om filen inte existerar, skapa den med filrättigheten endast läsRCK för ägaren.</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="25"/>

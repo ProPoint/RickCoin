@@ -12,7 +12,7 @@
 #include "optionsmodel.h"
 #include "guiutil.h"
 
-#include <QScrollBar>
+#include <QScrollRCK>
 #include <QComboBox>
 #include <QDoubleValidator>
 #include <QHBoxLayout>
@@ -108,15 +108,15 @@ TransactionView::TransactionView(QWidget *parent) :
     vlayout->addWidget(createDateRangeWidget());
     vlayout->addWidget(view);
     vlayout->setSpacing(0);
-    int width = view->verticalScrollBar()->sizeHint().width();
-    // Cover scroll bar width with spacing
+    int width = view->verticalScrollRCK()->sizeHint().width();
+    // Cover scroll RCK width with spacing
 #ifdef Q_WS_MAC
     hlayout->addSpacing(width+2);
 #else
     hlayout->addSpacing(width);
 #endif
-    // Always show scroll bar
-    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+    // Always show scroll RCK
+    view->setVerticalScrollRCKPolicy(Qt::ScrollRCKAlwaysOn);
     view->setTabKeyNavigation(false);
     view->setContextMenuPolicy(Qt::CustomContextMenu);
 

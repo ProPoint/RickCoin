@@ -34,19 +34,19 @@
 
 #include <QApplication>
 #include <QMainWindow>
-#include <QMenuBar>
+#include <QMenuRCK>
 #include <QMenu>
 #include <QIcon>
 #include <QTabWidget>
 #include <QVBoxLayout>
-#include <QToolBar>
-#include <QStatusBar>
+#include <QToolRCK>
+#include <QStatusRCK>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QLocale>
 #include <QMessageBox>
-#include <QProgressBar>
+#include <QProgressRCK>
 #include <QStackedWidget>
 #include <QDateTime>
 #include <QMovie>
@@ -70,25 +70,25 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("barcoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("RickCoin") + " - " + tr("Wallet"));
 #ifndef Q_WS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
 #else
-    setUnifiedTitleAndToolBarOnMac(true);
+    setUnifiedTitleAndToolRCKOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
     // Accept D&D of URIs
     setAcceptDrops(true);
 
-    // Create actions for the toolbar, menu bar and tray/dock icon
+    // Create actions for the toolRCK, menu RCK and tray/dock icon
     createActions();
 
-    // Create application menu bar
-    createMenuBar();
+    // Create application menu RCK
+    createMenuRCK();
 
-    // Create the toolbars
-    createToolBars();
+    // Create the toolRCKs
+    createToolRCKs();
 
     // Create the tray icon (or setup the dock icon)
     createTrayIcon();
@@ -124,10 +124,10 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 #endif
     setCentralWidget(centralWidget);
 
-    // Create status bar
-    statusBar();
+    // Create status RCK
+    statusRCK();
 
-    // Status bar notification icons
+    // Status RCK notification icons
     QFrame *frameBlocks = new QFrame();
     frameBlocks->setContentsMargins(0,0,0,0);
     frameBlocks->setMinimumWidth(73);
@@ -149,16 +149,16 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocksLayout->addWidget(labelBlocksIcon);
     frameBlocksLayout->addStretch();
 
-    // Progress bar and label for blocks download
-    progressBarLabel = new QLabel();
-    progressBarLabel->setVisible(false);
-    progressBar = new QProgressBar();
-    progressBar->setAlignment(Qt::AlignCenter);
-    progressBar->setVisible(false);
+    // Progress RCK and label for blocks download
+    progressRCKLabel = new QLabel();
+    progressRCKLabel->setVisible(false);
+    progressRCK = new QProgressRCK();
+    progressRCK->setAlignment(Qt::AlignCenter);
+    progressRCK->setVisible(false);
 
-    statusBar()->addWidget(progressBarLabel);
-    statusBar()->addWidget(progressBar);
-    statusBar()->addPermanentWidget(frameBlocks);
+    statusRCK()->addWidget(progressRCKLabel);
+    statusRCK()->addWidget(progressRCK);
+    statusRCK()->addPermanentWidget(frameBlocks);
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
@@ -185,7 +185,7 @@ BitcoinGUI::~BitcoinGUI()
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
 #ifdef Q_WS_MAC
-    delete appMenuBar;
+    delete appMenuRCK;
 #endif
 }
 
@@ -223,7 +223,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a barcoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a RickCoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -268,17 +268,17 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About barcoin"), this);
-    aboutAction->setToolTip(tr("Show information about barcoin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About RickCoin"), this);
+    aboutAction->setToolTip(tr("Show information about RickCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for barcoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for RickCoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("Show/Hide &barcoin"), this);
-    toggleHideAction->setToolTip(tr("Show or hide the barcoin window"));
+    toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("Show/Hide &RickCoin"), this);
+    toggleHideAction->setToolTip(tr("Show or hide the RickCoin window"));
     exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -301,18 +301,18 @@ void BitcoinGUI::createActions()
     connect(changePassphraseAction, SIGNAL(triggered()), this, SLOT(changePassphrase()));
 }
 
-void BitcoinGUI::createMenuBar()
+void BitcoinGUI::createMenuRCK()
 {
 #ifdef Q_WS_MAC
-    // Create a decoupled menu bar on Mac which stays even if the window is closed
-    appMenuBar = new QMenuBar();
+    // Create a decoupled menu RCK on Mac which stays even if the window is closed
+    appMenuRCK = new QMenuRCK();
 #else
-    // Get the main window's menu bar on other platforms
-    appMenuBar = menuBar();
+    // Get the main window's menu RCK on other platforms
+    appMenuRCK = menuRCK();
 #endif
 
     // Configure the menus
-    QMenu *file = appMenuBar->addMenu(tr("&File"));
+    QMenu *file = appMenuRCK->addMenu(tr("&File"));
     file->addAction(backupWalletAction);
     file->addAction(exportAction);
 #ifndef FIRST_CLASS_MESSAGING
@@ -322,36 +322,36 @@ void BitcoinGUI::createMenuBar()
     file->addSeparator();
     file->addAction(quitAction);
 
-    QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
+    QMenu *settings = appMenuRCK->addMenu(tr("&Settings"));
     settings->addAction(encryptWalletAction);
     settings->addAction(changePassphraseAction);
     settings->addSeparator();
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+    QMenu *help = appMenuRCK->addMenu(tr("&Help"));
     help->addAction(openRPCConsoleAction);
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 }
 
-void BitcoinGUI::createToolBars()
+void BitcoinGUI::createToolRCKs()
 {
-    QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
-    toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    toolbar->addAction(overviewAction);
-    toolbar->addAction(sendCoinsAction);
-    toolbar->addAction(receiveCoinsAction);
-    toolbar->addAction(historyAction);
-    toolbar->addAction(addressBookAction);
-    toolbar->addAction(miningAction);
+    QToolRCK *toolRCK = addToolRCK(tr("Tabs toolRCK"));
+    toolRCK->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    toolRCK->addAction(overviewAction);
+    toolRCK->addAction(sendCoinsAction);
+    toolRCK->addAction(receiveCoinsAction);
+    toolRCK->addAction(historyAction);
+    toolRCK->addAction(addressBookAction);
+    toolRCK->addAction(miningAction);
 #ifdef FIRST_CLASS_MESSAGING
-    toolbar->addAction(firstClassMessagingAction);
+    toolRCK->addAction(firstClassMessagingAction);
 #endif
 
-    QToolBar *toolbar2 = addToolBar(tr("Actions toolbar"));
-    toolbar2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    toolbar2->addAction(exportAction);
+    QToolRCK *toolRCK2 = addToolRCK(tr("Actions toolRCK"));
+    toolRCK2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    toolRCK2->addAction(exportAction);
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
@@ -371,12 +371,12 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("barcoin client") + QString(" ") + tr("[testnet]"));
-                trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
-                toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
+                trayIcon->setToolTip(tr("RickCoin client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setIcon(QIcon(":/icons/toolRCK_testnet"));
+                toggleHideAction->setIcon(QIcon(":/icons/toolRCK_testnet"));
             }
 
-            aboutAction->setIcon(QIcon(":/icons/toolbar_testnet"));
+            aboutAction->setIcon(QIcon(":/icons/toolRCK_testnet"));
         }
 
         // Keep up to date with client
@@ -435,8 +435,8 @@ void BitcoinGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("barcoin client"));
-    trayIcon->setIcon(QIcon(":/icons/toolbar"));
+    trayIcon->setToolTip(tr("RickCoin client"));
+    trayIcon->setIcon(QIcon(":/icons/toolRCK"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
     trayIcon->show();
@@ -472,7 +472,7 @@ void BitcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
-        // Click on system tray icon triggers "show/hide barcoin"
+        // Click on system tray icon triggers "show/hide RickCoin"
         toggleHideAction->trigger();
     }
 }
@@ -505,17 +505,17 @@ void BitcoinGUI::setNumConnections(int count)
     case 7: case 8: case 9: icon = ":/icons/connect_3"; break;
     default: icon = ":/icons/connect_4"; break;
     }
-    labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to barcoin network", "", count));
+    labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSRCK_ICONSIZE,STATUSRCK_ICONSIZE));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to RickCoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 {
-    // don't show / hide progressBar and it's label if we have no connection(s) to the network
+    // don't show / hide progressRCK and it's label if we have no connection(s) to the network
     if (!clientModel || clientModel->getNumConnections() == 0)
     {
-        progressBarLabel->setVisible(false);
-        progressBar->setVisible(false);
+        progressRCKLabel->setVisible(false);
+        progressRCK->setVisible(false);
 
         return;
     }
@@ -527,33 +527,33 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
         int nRemainingBlocks = nTotalBlocks - count;
         float nPercentageDone = count / (nTotalBlocks * 0.01f);
 
-        if (clientModel->getStatusBarWarnings() == "")
+        if (clientModel->getStatusRCKWarnings() == "")
         {
-            progressBarLabel->setText(tr("Synchronizing with network..."));
-            progressBarLabel->setVisible(true);
-            progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
-            progressBar->setMaximum(nTotalBlocks);
-            progressBar->setValue(count);
-            progressBar->setVisible(true);
+            progressRCKLabel->setText(tr("Synchronizing with network..."));
+            progressRCKLabel->setVisible(true);
+            progressRCK->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
+            progressRCK->setMaximum(nTotalBlocks);
+            progressRCK->setValue(count);
+            progressRCK->setVisible(true);
         }
         else
         {
-            progressBarLabel->setText(clientModel->getStatusBarWarnings());
-            progressBarLabel->setVisible(true);
-            progressBar->setVisible(false);
+            progressRCKLabel->setText(clientModel->getStatusRCKWarnings());
+            progressRCKLabel->setVisible(true);
+            progressRCK->setVisible(false);
         }
         tooltip = tr("Downloaded %1 of %2 blocks of transaction history (%3% done).").arg(count).arg(nTotalBlocks).arg(nPercentageDone, 0, 'f', 2);
     }
     else
     {
-        if (clientModel->getStatusBarWarnings() == "")
-            progressBarLabel->setVisible(false);
+        if (clientModel->getStatusRCKWarnings() == "")
+            progressRCKLabel->setVisible(false);
         else
         {
-            progressBarLabel->setText(clientModel->getStatusBarWarnings());
-            progressBarLabel->setVisible(true);
+            progressRCKLabel->setText(clientModel->getStatusRCKWarnings());
+            progressRCKLabel->setVisible(true);
         }
-        progressBar->setVisible(false);
+        progressRCK->setVisible(false);
         tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
     }
 
@@ -590,7 +590,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     if(secs < 90*60 && count >= nTotalBlocks)
     {
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
-        labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
+        labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSRCK_ICONSIZE, STATUSRCK_ICONSIZE));
 
         overviewPage->showOutOfSyncWarning(false);
     }
@@ -613,21 +613,21 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     tooltip = QString("<nobr>") + tooltip + QString("</nobr>");
 
     labelBlocksIcon->setToolTip(tooltip);
-    progressBarLabel->setToolTip(tooltip);
-    progressBar->setToolTip(tooltip);
+    progressRCKLabel->setToolTip(tooltip);
+    progressRCK->setToolTip(tooltip);
 }
 
 void BitcoinGUI::setMining(bool mining, int hashrate)
 {
     if (mining)
     {
-        labelMiningIcon->setPixmap(QIcon(":/icons/mining_active").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelMiningIcon->setToolTip(tr("Mining barcoin at %1 hashes per second").arg(hashrate));
+        labelMiningIcon->setPixmap(QIcon(":/icons/mining_active").pixmap(STATUSRCK_ICONSIZE,STATUSRCK_ICONSIZE));
+        labelMiningIcon->setToolTip(tr("Mining RickCoin at %1 hashes per second").arg(hashrate));
     }
     else
     {
-        labelMiningIcon->setPixmap(QIcon(":/icons/mining_inactive").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelMiningIcon->setToolTip(tr("Not mining barcoin"));
+        labelMiningIcon->setPixmap(QIcon(":/icons/mining_inactive").pixmap(STATUSRCK_ICONSIZE,STATUSRCK_ICONSIZE));
+        labelMiningIcon->setToolTip(tr("Not mining RickCoin"));
     }
 }
 
@@ -842,7 +842,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid barcoin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid RickCoin address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -857,7 +857,7 @@ void BitcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid barcoin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid RickCoin address or malformed URI parameters."));
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)
@@ -872,7 +872,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Unlocked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSRCK_ICONSIZE,STATUSRCK_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
@@ -880,7 +880,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
         break;
     case WalletModel::Locked:
         labelEncryptionIcon->show();
-        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
+        labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSRCK_ICONSIZE,STATUSRCK_ICONSIZE));
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);

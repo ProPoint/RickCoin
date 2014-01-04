@@ -482,12 +482,12 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
+        <source>Tabs toolRCK</source>
         <translation>Registerkarten-Leiste</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>Aktionen-Werkzeugleiste</translation>
     </message>
     <message>
@@ -929,7 +929,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../messagepage.cpp" line="105"/>
         <source>Private key for %1 is not available.</source>
-        <translation>Privater Schlüssel für %1 ist nicht verfügbar.</translation>
+        <translation>Privater Schlüssel für %1 ist nicht verfügRCK.</translation>
     </message>
     <message>
         <location filename="../messagepage.cpp" line="117"/>
@@ -1239,7 +1239,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../rpcconsole.cpp" line="214"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Bitte &lt;b&gt;help&lt;/b&gt; eingeben, um eine Übersicht verfügbarer Befehle zu erhalten.</translation>
+        <translation>Bitte &lt;b&gt;help&lt;/b&gt; eingeben, um eine Übersicht verfügRCKer Befehle zu erhalten.</translation>
     </message>
 </context>
 <context>
@@ -1554,7 +1554,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../transactiondesc.cpp" line="229"/>
         <source>Generated coins must wait 120 blocks before they can be spent.  When you generated this block, it was broadcast to the network to be added to the block chain.  If it fails to get into the chain, it will change to &quot;not accepted&quot; and not be spendable.  This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Generierte Bitcoins müssen 120 Blöcke lang warten, bevor sie ausgegeben werden können. Als Sie diesen Block generierten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in &quot;nicht angenommen&quot; geändert und der Betrag wird nicht verfügbar werden. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block zur selben Zeit wie Sie generierte.</translation>
+        <translation>Generierte Bitcoins müssen 120 Blöcke lang warten, bevor sie ausgegeben werden können. Als Sie diesen Block generierten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in &quot;nicht angenommen&quot; geändert und der Betrag wird nicht verfügRCK werden. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block zur selben Zeit wie Sie generierte.</translation>
     </message>
 </context>
 <context>
@@ -1620,7 +1620,7 @@ Adresse: %4</translation>
     <message numerus="yes">
         <location filename="../transactiontablemodel.cpp" line="301"/>
         <source>Mined balance will be available in %n more blocks</source>
-        <translation><numerusform>Der erarbeitete Betrag wird in %n Block verfügbar sein</numerusform><numerusform>Der erarbeitete Betrag wird in %n Blöcken verfügbar sein</numerusform></translation>
+        <translation><numerusform>Der erarbeitete Betrag wird in %n Block verfügRCK sein</numerusform><numerusform>Der erarbeitete Betrag wird in %n Blöcken verfügRCK sein</numerusform></translation>
     </message>
     <message>
         <location filename="../transactiontablemodel.cpp" line="307"/>
@@ -1862,7 +1862,7 @@ Adresse: %4</translation>
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="20"/>
         <source>Enter the message and signature below (be careful to correctly copy newlines, spaces, tabs and other invisible characters) to obtain the Bitcoin address used to sign the message.</source>
-        <translation>Geben Sie die Nachricht und Signatur unten ein (achten Sie besonders darauf Zeilenumbrüche, Leerzeichen, Tabulatoren und andere unsichtbare Zeichen mit zu kopieren), um die Bitcoin-Adresse zu erhalten, die zum signieren der Nachricht verwendet wurde.</translation>
+        <translation>Geben Sie die Nachricht und Signatur unten ein (achten Sie besonders darauf Zeilenumbrüche, Leerzeichen, Tabulatoren und andere unsichtRCKe Zeichen mit zu kopieren), um die Bitcoin-Adresse zu erhalten, die zum signieren der Nachricht verwendet wurde.</translation>
     </message>
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="62"/>
@@ -1948,7 +1948,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>In den Infobereich anstatt in die Taskleiste &amp;minimieren</translation>
     </message>
     <message>
@@ -2229,7 +2229,7 @@ SSL Optionen: (siehe Bitcoin-Wiki für SSL Installationsanweisungen)</translatio
     <message>
         <location filename="../bitcoinstrings.cpp" line="145"/>
         <source>Warning: Disk space is low</source>
-        <translation>Warnung: Nicht mehr genügend Festplattenplatz verfügbar</translation>
+        <translation>Warnung: Nicht mehr genügend Festplattenplatz verfügRCK</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="107"/>

@@ -484,12 +484,12 @@ Bent u er zeker van uw dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
+        <source>Tabs toolRCK</source>
         <translation>Tab-werkbalk</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
+        <source>Actions toolRCK</source>
         <translation>Actie-werkbalk</translation>
     </message>
     <message>
@@ -1243,7 +1243,7 @@ Adres: %4
     <message>
         <location filename="../rpcconsole.cpp" line="214"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Typ &lt;b&gt;help&lt;/b&gt; voor een overzicht van de beschikbare commando&apos;s.</translation>
+        <translation>Typ &lt;b&gt;help&lt;/b&gt; voor een overzicht van de beschikRCKe commando&apos;s.</translation>
     </message>
 </context>
 <context>
@@ -1866,7 +1866,7 @@ Adres: %4
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="20"/>
         <source>Enter the message and signature below (be careful to correctly copy newlines, spaces, tabs and other invisible characters) to obtain the Bitcoin address used to sign the message.</source>
-        <translation>Voer het bericht en de handtekening hieronder in (let erop dat enters, spaties, tabs en andere onzichtbare karakters goed worden overgenomen) om het Bitcoin-adres te verkrijgen dat gebruikt is om het bericht te ondertekenen.</translation>
+        <translation>Voer het bericht en de handtekening hieronder in (let erop dat enters, spaties, tabs en andere onzichtRCKe karakters goed worden overgenomen) om het Bitcoin-adres te verkrijgen dat gebruikt is om het bericht te ondertekenen.</translation>
     </message>
     <message>
         <location filename="../forms/verifymessagedialog.ui" line="62"/>
@@ -1952,7 +1952,7 @@ Adres: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
         <translation>&amp;Minimaliseer naar het systeemvak in plaats van de taakbalk</translation>
     </message>
     <message>
@@ -2251,7 +2251,7 @@ SSL-opties: (zie de Bitcoin wiki voor SSL-instructies)</translation>
     <message>
         <location filename="../bitcoinstrings.cpp" line="114"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
-        <translation>Aanvaardbare ciphers (standaard: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
+        <translation>AanvaardRCKe ciphers (standaard: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
         <location filename="../bitcoinstrings.cpp" line="145"/>

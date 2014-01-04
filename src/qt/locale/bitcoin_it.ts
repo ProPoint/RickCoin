@@ -483,13 +483,13 @@ Si è sicuri di voler cifrare il portamonete?</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
-        <translation>Barra degli strumenti &quot;Tabs&quot;</translation>
+        <source>Tabs toolRCK</source>
+        <translation>RCKra degli strumenti &quot;Tabs&quot;</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
-        <translation>Barra degli strumenti &quot;Azioni&quot;</translation>
+        <source>Actions toolRCK</source>
+        <translation>RCKra degli strumenti &quot;Azioni&quot;</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="334"/>
@@ -1952,8 +1952,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Minimizza sul tray invece che sulla barra delle applicazioni</translation>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
+        <translation>&amp;Minimizza sul tray invece che sulla RCKra delle applicazioni</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="317"/>

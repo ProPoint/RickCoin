@@ -40,7 +40,7 @@ static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
 static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const int64 MIN_TX_FEE = 10000000;
 static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64 MAX_MONEY = 10000 * COIN; // maximum number of coins
+static const int64 MAX_MONEY = 1000000000 * COIN; // maximum number of coins
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 static const int COINBASE_MATURITY = 15;
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
@@ -547,7 +547,7 @@ public:
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
         // need a fee.
-        return dPriority > COIN * 576 / 250; // 5760 blocks found a day. Priority cutoff is 1 BAR day / 250 bytes.
+        return dPriority > COIN * 1440 / 250; // 5760 blocks found a day. Priority cutoff is 1 RCK day / 250 bytes.
     }
 
     int64 GetMinFee(unsigned int nBlockSize=1, bool fAllowFree=true, enum GetMinFee_mode mode=GMF_BLOCK) const
@@ -1408,7 +1408,7 @@ public:
 
 
 /** Alerts are for notifying old versions if they become too obsolete and
- * need to upgrade.  The message is displayed in the status bar.
+ * need to upgrade.  The message is displayed in the status RCK.
  * Alert messages are broadcast as a vector of signed data.  Unserializing may
  * not read the entire buffer if the alert is for a newer version, but older
  * versions can still relay the original data.
@@ -1429,7 +1429,7 @@ public:
 
     // Actions
     std::string strComment;
-    std::string strStatusBar;
+    std::string strStatusRCK;
     std::string strReserved;
 
     IMPLEMENT_SERIALIZE
@@ -1447,7 +1447,7 @@ public:
         READWRITE(nPriority);
 
         READWRITE(strComment);
-        READWRITE(strStatusBar);
+        READWRITE(strStatusRCK);
         READWRITE(strReserved);
     )
 
@@ -1465,7 +1465,7 @@ public:
         nPriority = 0;
 
         strComment.clear();
-        strStatusBar.clear();
+        strStatusRCK.clear();
         strReserved.clear();
     }
 
@@ -1490,7 +1490,7 @@ public:
                 "    setSubVer    = %s\n"
                 "    nPriority    = %d\n"
                 "    strComment   = \"%s\"\n"
-                "    strStatusBar = \"%s\"\n"
+                "    strStatusRCK = \"%s\"\n"
                 ")\n",
             nVersion,
             nRelayUntil,
@@ -1503,7 +1503,7 @@ public:
             strSetSubVer.c_str(),
             nPriority,
             strComment.c_str(),
-            strStatusBar.c_str());
+            strStatusRCK.c_str());
     }
 
     void print() const

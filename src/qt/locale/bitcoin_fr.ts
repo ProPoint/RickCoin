@@ -483,13 +483,13 @@ Are you sure you wish to encrypt your wallet?</source>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="311"/>
-        <source>Tabs toolbar</source>
-        <translation>Barre d&apos;outils des onglets</translation>
+        <source>Tabs toolRCK</source>
+        <translation>RCKre d&apos;outils des onglets</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="322"/>
-        <source>Actions toolbar</source>
-        <translation>Barre d&apos;outils des actions</translation>
+        <source>Actions toolRCK</source>
+        <translation>RCKre d&apos;outils des actions</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="334"/>
@@ -1950,8 +1950,8 @@ Adresse : %4
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="316"/>
-        <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Minimiser dans la barre système au lieu de la barre des tâches</translation>
+        <source>&amp;Minimize to the tray instead of the taskRCK</source>
+        <translation>&amp;Minimiser dans la RCKre système au lieu de la RCKre des tâches</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="317"/>
