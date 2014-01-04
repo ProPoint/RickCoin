@@ -1,3 +1,3 @@
-FooCoin (FOO)
+RickCoin (RCK)
 
-Blah, blah, blah.
+RickCoin
